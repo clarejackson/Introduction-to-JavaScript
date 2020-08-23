@@ -11,17 +11,16 @@ if(votingAge > 18) {
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
-let numOne = 2;
-let numTwo = 4;
+let store = 'Belk';
+let price = '$10';
 
-if(numTwo < numOne) {
-  numOne = numOne + 1
-  console.log('numOne is bigger', numOne)
-} else {
-  console.log('numOne is smaller', numOne)
+if(store === 'TJ Maxx') {
+  price = '$10';
+} 
+if(store === 'Belk'){
+  price = '$20';
 }
-
-
+console.log(price);
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
@@ -40,8 +39,13 @@ console.log(multiply(4,7));
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
-function
-myAge * 7
+
+let myDogAge = function (age){
+  return age * 7;
+}
+
+console.log(myDogAge(20));
+
 
 
 
@@ -63,6 +67,16 @@ myAge * 7
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
+// function dogFeeder(weightInPounds, ageInYears){
+//   if(ageInYears >= 1) {
+//     if ()
+//   } else if (ageInYears < 1) {
+    
+//   }
+// }
+// console.log(dogFeeder(15, 1));
+
+
 
 
 
@@ -74,30 +88,50 @@ myAge * 7
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-  
+  // function roshambo(str) {
+  //   let ai = Math.random();
+  //   let response = ""
+  //   if (ai > .30) {
+  //      response = "Rock"
+  //   } else if (ai > .50) {
+  //     response = "Paper"
+  //   } else {
+  //     response = "Scissors"
+  //   }
+
+  //   if (str === "rock") {
+
+  //   }
+  // }
   
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
-
-
-
+let kmConverter = function(kilometers){
+  return kilometers / .621;
+}
+console.log(kmConverter(1) + " miles");
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
-  
 
-
-
-
+let centiMeters = function(feet){
+  return feet * 30.48;
+}
+console.log(centiMeters(1) + " cm");
 /************************************************************** Task 6 **************************************************************/
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
-
-
+function annoyingSong(bottles){
+  for ( let i = bottles; i > 0; i-- ){
+    console.log(i + " bottles of soda on the wall")
+    console.log(i-- + " bottles of soda on the wall")
+  }
+}
+console.log(annoyingSong(40));
 
 
 /************************************************************** Task 7 **************************************************************/
@@ -108,9 +142,22 @@ myAge * 7
 //70s should be Cs 
 //60s should be D 
 //and anything below 60 should be F
-  
 
-  
+  let letterGrade = 'A';
+  let numberGrade = 79;
+
+ if (90 <= numberGrade && numberGrade <= 100){
+   letterGrade = 'A';
+} if (80 <= numberGrade && numberGrade <= 89){
+   letterGrade = 'B';
+ } if (70 <= numberGrade && numberGrade <= 79){
+    letterGrade = 'C';
+ } if (60 <= numberGrade && numberGrade <= 69){
+    letterGrade = 'D';
+ } if (numberGrade < 60){
+    letterGrade = 'F';
+ }
+  console.log(letterGrade);
   
 
 /************************************************************** Stretch **************************************************************/
