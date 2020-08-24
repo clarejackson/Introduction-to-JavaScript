@@ -40,7 +40,7 @@ console.log(multiply(4,7));
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
-let myDogAge = function (age){
+let myDogAge = function(age){
   return age * 7;
 }
 
@@ -67,14 +67,30 @@ console.log(myDogAge(20));
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
-// function dogFeeder(weightInPounds, ageInYears){
-//   if(ageInYears >= 1) {
-//     if ()
-//   } else if (ageInYears < 1) {
-    
-//   }
-// }
-// console.log(dogFeeder(15, 1));
+function dogFeeder(weightInPounds, ageInYears){
+  if(ageInYears >= 1) {
+    if (weightInPounds <= 5){
+      return weightInPounds * .05;
+    } else if (6 <= weightInPounds && weightInPounds <= 10){
+      return weightInPounds * .04;
+    } else if (11 <= weightInPounds && weightInPounds <= 15){
+      return weightInPounds * .03;
+    } else if (weightInPounds < 15){
+      return weightInPounds * .02;
+    }
+  } else if (ageInYears < 1) {
+    if (.166 <= ageInYears <= .333){
+      return weightInPounds * .1;
+    } else if (.333 <= ageInYears <= .583){
+      return weightInPounds * .05;
+    } else if (.583 <= ageInYears <= .999){
+      return weightInPounds * .04;
+    }
+  } else {
+    return "Not a valid input.";
+  }
+}
+console.log(dogFeeder(15, 1));
 
 
 
@@ -88,23 +104,36 @@ console.log(myDogAge(20));
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-  // function roshambo(str) {
-  //   let ai = Math.random();
-  //   let response = ""
-  //   if (ai > .30) {
-  //      response = "Rock"
-  //   } else if (ai > .50) {
-  //     response = "Paper"
+  // let response = "Rock";
+  // let throw = "Rock";
+  // let ai = Math.random();
+  //   if (ai > .33) {
+  //     response = "Rock";
+  //   } else if (ai > .66) {
+  //     response = "Paper";
   //   } else {
-  //     response = "Scissors"
+  //     response = "Scissors";
   //   }
-
-  //   if (str === "rock") {
-
+  //   // console.log(response);
+    
+  // let roshambo = function(throw) {
+  //   if (throw === response){
+  //     return "It is a tie!";
+  //   } else if (throw === "Rock" && response === "Paper"){
+  //     return "You lost!";
+  //   } else if (throw === "Rock" && response === "Scissors"){
+  //     return "You win!";
+  //   } else if (throw === "Paper" && response === "Scissors"){
+  //     return "You lost!";
+  //   } else if (throw === "Paper" && response === "Rock"){
+  //     return "You win!";
+  //   } else if (throw === "Scissors" && response === "Paper"){
+  //     return "You win!";
+  //   } else if (throw === "Scissors" && response === "Rock"){
+  //     return "You lost!"
   //   }
   // }
-  
-
+  //   console.log(roshambo("Rock"))
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
@@ -124,11 +153,10 @@ console.log(centiMeters(1) + " cm");
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
-  
+
 function annoyingSong(bottles){
-  for ( let i = bottles; i > 0; i-- ){
-    console.log(i + " bottles of soda on the wall")
-    console.log(i-- + " bottles of soda on the wall")
+  for (let i = bottles; i > 0; i-- ){
+    return i + " bottles of soda on the wall, " + i + " bottles of soda." + " Take one down pass it around, " + (100 - i) + " bottles of soda on the wall.";
   }
 }
 console.log(annoyingSong(40));
