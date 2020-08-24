@@ -104,36 +104,36 @@ console.log(dogFeeder(15, 1));
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-  // let response = "Rock";
-  // let throw = "Rock";
-  // let ai = Math.random();
-  //   if (ai > .33) {
-  //     response = "Rock";
-  //   } else if (ai > .66) {
-  //     response = "Paper";
-  //   } else {
-  //     response = "Scissors";
-  //   }
-  //   // console.log(response);
+  let response = "";
+  let user = "Rock";
+  let ai = Math.random();
+    if (ai > .33) {
+      response = "Rock";
+    } else if (ai > .66) {
+      response = "Paper";
+    } else {
+      response = "Scissors";
+    }
+    // console.log(response);
     
-  // let roshambo = function(throw) {
-  //   if (throw === response){
-  //     return "It is a tie!";
-  //   } else if (throw === "Rock" && response === "Paper"){
-  //     return "You lost!";
-  //   } else if (throw === "Rock" && response === "Scissors"){
-  //     return "You win!";
-  //   } else if (throw === "Paper" && response === "Scissors"){
-  //     return "You lost!";
-  //   } else if (throw === "Paper" && response === "Rock"){
-  //     return "You win!";
-  //   } else if (throw === "Scissors" && response === "Paper"){
-  //     return "You win!";
-  //   } else if (throw === "Scissors" && response === "Rock"){
-  //     return "You lost!"
-  //   }
-  // }
-  //   console.log(roshambo("Rock"))
+  let roshambo = function(user) {
+    if (user === response){
+      return "It is a tie!";
+    } else if (user === "Rock" && response === "Paper"){
+      return "You lost!";
+    } else if (user === "Rock" && response === "Scissors"){
+      return "You win!";
+    } else if (user === "Paper" && response === "Scissors"){
+      return "You lost!";
+    } else if (user === "Paper" && response === "Rock"){
+      return "You win!";
+    } else if (user === "Scissors" && response === "Paper"){
+      return "You win!";
+    } else if (user === "Scissors" && response === "Rock"){
+      return "You lost!"
+    }
+  }
+    console.log(roshambo("Scissors"))
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
@@ -155,7 +155,7 @@ console.log(centiMeters(1) + " cm");
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
 
 function annoyingSong(bottles){
-  for (let i = bottles; i > 0; i-- ){
+  for (let i = bottles; i < 100; i--){
     return i + " bottles of soda on the wall, " + i + " bottles of soda." + " Take one down pass it around, " + (100 - i) + " bottles of soda on the wall.";
   }
 }
