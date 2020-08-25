@@ -155,11 +155,11 @@ console.log(centiMeters(1) + " cm");
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
 
 function annoyingSong(bottles){
-  for (let i = bottles; i < 100; i--){
-    return i + " bottles of soda on the wall, " + i + " bottles of soda." + " Take one down pass it around, " + (100 - i) + " bottles of soda on the wall.";
+  for (let i = bottles; i > 0; i--){
+    console.log( i + " bottles of soda on the wall, " + i + " bottles of soda." + " Take one down pass it around, " + (i - 1) + " bottles of soda on the wall.");
   }
 }
-console.log(annoyingSong(40));
+// console.log(annoyingSong(40));
 
 
 /************************************************************** Task 7 **************************************************************/
